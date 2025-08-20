@@ -1,0 +1,5 @@
+Pillow
+Flask
+flask-sqlalchemy
+flask_socketio
+werkzeug

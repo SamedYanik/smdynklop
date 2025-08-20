@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+       <ul class="main-list">
+        <li class="list__item">
+          <a href="/login">
+            <img src="../static/img/login.svg" alt="login" width="20" height="20">
+            {% if user_email %}
+              <span>{{ user_email }}</span>
+            {% endif %}
+          </a>
+        </li>
+      </ul>
+    <img src="../static/img/web sitesi.jpeg" class="logo" alt="login" width="100" height="100">
+    <h1>HOŞGELDİNİZ!!</h1>
+    <button type="button" onclick="window.location.href='{{ url_for('login') }}'">Giriş yap</button>
+    <button type="button" onclick="window.location.href='{{ url_for('filmler') }}'">Filmler</button>
+    <button type="button" onclick="window.location.href='{{ url_for('hakkinda') }}'">Hakkında</button>
+    <button type="button" onclick="window.location.href='{{ url_for('dogal_afet') }}'">Doğal Afet</button>
+    <button type="button" onclick="window.location.href='{{ url_for('iklim_degisikligi') }}'">İklim değişiklliği</button>
+    <button type="button" onclick="window.location.href='{{ url_for('discord') }}'">Discord Kanalımız!!</button>
+    <button onclick="if(confirm('Oturumu kapatmak istediğinize emin misiniz?')) { window.location.href = '/logout'; }">Çıkış Yap</button>
+
+ </body>
+</html>
